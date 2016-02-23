@@ -1,0 +1,19 @@
+/*
+Colours
+darkblue : 			#060c15
+maroon :		 		#660800
+text :		 			#660800
+footer :				#1d1d1b
+*/
+
+body {
+	background-color: #060c15;
+}
+
+h1 {
+	color: #660800;
+}
+
+footer {
+	background-color: #1d1d1b;
+}
