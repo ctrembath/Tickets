@@ -10,10 +10,18 @@ body {
 	background-color: #060c15;
 }
 
+
 h1 {
 	color: #660800;
 }
 
+.maroonstrip{
+	height:50%;
+	background-color: #660800;
+}
+
 footer {
 	background-color: #1d1d1b;
+	height: 20%;
+	width: 100%;
 }
