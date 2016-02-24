@@ -15,7 +15,9 @@
 
 <div class="imageGrid">
 	<ul>
-		<img src="">
+		<% @photos.each do |p| %>
+		    <%= p.image_url %><br>
+		<% end %>
 	</ul>
 <!-- 	pagination-->
 </div>
