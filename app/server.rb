@@ -6,12 +6,17 @@ set :public_dir, Proc.new { File.join(root, "..", "public") }
 get '/' do
 	flickr = Flickr.new('flickr.yml')
 	@photos = flickr.photos.search(:tags => 'cutecat')
-	# get_photos
+	puts params[:searchtag]
+	puts "***************************"
 	erb :index
 end
 
 
-
+post '/' do
+	puts params[:searchtag]
+	puts "***************************"
+	erb :index
+end
 
 # def get_photos
 # 	puts "found #{photos.size} photo(s)"

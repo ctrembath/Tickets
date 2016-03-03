@@ -1,9 +1,10 @@
 <header>
 	<h1> Photos </h1>
 	<div class="searchBar">
-		<form id="searchingForm">
-      <input class="search" type="text" placeholder="what track u wnt?" value=""/>
-      <input id="search_submit" value="click" type="button">
+		<%= form_for :search%>
+		  <%= f.text_field :searchtag %><br />
+		 <%= f.submit %>
+		<% end %>
 	</div>
 </header>
 
@@ -16,7 +17,7 @@
 <div class="imageGrid">
 	<ul>
 		<% @photos.each do |p| %>
-		    <%= p.image_url %><br>
+		    <img src=<%= p.image_url %>><br>
 		<% end %>
 	</ul>
 <!-- 	pagination-->
