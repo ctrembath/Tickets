@@ -1,6 +1,9 @@
-// $(document).ready(function() {
-//   $('#search_submit').click(function() {
-//     alert($('.search').val());
-//   });
-// });
+$(document).ready(function() {
+	
+	document.getElementById("bigImage").src = $('.flickImg').first().attr('src');
 
+	$('.flickImg').click(function(){
+		  var thumbnail= $(this).attr('src');
+		  document.getElementById("bigImage").src = thumbnail;
+	});
+});

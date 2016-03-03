@@ -2,17 +2,27 @@
 Colours
 darkblue : 			#060c15
 maroon :		 		#660800
-text :		 			#660800
+text :		 			#fcb712
 footer :				#1d1d1b
 */
 
 body {
-/*	background-color: #060c15;
-*/}
+	background-color: #060c15;
+}
+
+header {
+	padding: 3rem 2rem;
+}
 
 
 h1 {
-	color: #660800;
+	color: #fcb712;
+	display: inline;
+}
+
+.searchBar {
+	float: right;
+	margin-right: 2rem;
 }
 
 .maroonstrip{
@@ -25,3 +35,32 @@ footer {
 	height: 20%;
 	width: 100%;
 }
+
+ul {
+	list-style: none;
+	font-size: 0px;
+	text-align: center;
+}
+
+ul li {
+	display: inline-block;
+	padding: 10px;
+	font-size: 16px;
+	font-size: 1rem;
+	vertical-align: top;
+}
+
+#bigImage {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.flickImg {
+	height: 16rem;
+	width: 16rem;
+}
+
+.flickImg:hover {
+	border: 1px solid #fcb712;
+};

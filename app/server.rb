@@ -4,10 +4,9 @@ require 'flickr_fu'
 set :public_dir, Proc.new { File.join(root, "..", "public") }
 
 get '/' do
-	# connect_to_flickr
-	if params[:search] != ""
+	connect_to_flickr
+	if params[:search]
 		search_flickr(params[:search])
-		params[:search] = ""
 	else
 		search_flickr('glastonbury')
 	end
@@ -21,6 +20,5 @@ def connect_to_flickr
 end
 
 def search_flickr(search_term)
-	connect_to_flickr
-	@photos = @flickr.photos.search(:tags => search_term).take(10)
+	@photos = @flickr.photos.search(:tags => search_term).take(12)
 end
