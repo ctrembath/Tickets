@@ -4,23 +4,23 @@ require 'flickr_fu'
 set :public_dir, Proc.new { File.join(root, "..", "public") }
 
 get '/' do
-	flickr = Flickr.new('flickr.yml')
-	@photos = flickr.photos.search(:tags => 'cutecat')
-	puts params[:searchtag]
-	puts "***************************"
+	# connect_to_flickr
+	if params[:search] != ""
+		search_flickr(params[:search])
+		params[:search] = ""
+	else
+		search_flickr('glastonbury')
+	end
 	erb :index
 end
 
-
-post '/' do
-	puts params[:searchtag]
-	puts "***************************"
-	erb :index
+private
+	
+def connect_to_flickr
+	@flickr = Flickr.new('flickr.yml')
 end
 
-# def get_photos
-# 	puts "found #{photos.size} photo(s)"
-# 	@photos.each do |photo|
-#     puts photo.title
-#     end
-# end
+def search_flickr(search_term)
+	connect_to_flickr
+	@photos = @flickr.photos.search(:tags => search_term).take(10)
+end
