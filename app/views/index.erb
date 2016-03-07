@@ -11,7 +11,10 @@
 	<article id="selectedImage">
 		<div class="maroonStip"></div>
 			<img id="bigImage" src="" width="1000" height="480">
-		<p class="imageTitle"></p>
+		<nav class="navsocial">
+			<img class="social" src="../images/social.png">
+			<p class="share">SHARE</p>
+		</nav>
 	</article>
 
 <div class="imageGrid">
@@ -22,8 +25,8 @@
 				<% end %>
 		<% end %>
 	</ul>
+<%= will_paginate @photos, previous_label: "<", next_label: ">" , :class => 'pagination' %>
 </div>
-<%= will_paginate @photos, previous_label: "<", next_label: ">" %>
 
 <footer>
 

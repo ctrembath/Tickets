@@ -7,8 +7,8 @@ footer :				#1d1d1b
 */
 
 body {
-/*	background-color: #060c15;
-*/}
+	background-color: #060c15;
+}
 
 header {
 	padding: 3rem 2rem;
@@ -57,10 +57,53 @@ ul li {
 }
 
 .flickImg {
-	height: 16rem;
-	width: 16rem;
+	height: 10rem;
+	width: 10rem;
 }
 
 .flickImg:hover {
 	border: 1px solid #fcb712;
-};
+}
+
+.imageGrid {
+	margin: 0rem 5rem;
+	padding: 5rem 0rem;
+	border-top: 3px solid white;
+	border-bottom: 3px solid white;
+}
+
+.imageGrid a {
+	color: white;
+	text-decoration: none;
+}
+
+.share {
+	color: #fcb712;
+	background-color: #660800;
+	text-align: center;
+	padding: 1rem 3rem;
+}
+
+.social {
+	margin-top: -6rem;
+	display:none;
+}
+.navsocial {
+	position: relative;
+	float: right;
+	padding-right: 5rem;
+}
+
+#selectedImage {
+	padding-bottom: 5rem;
+}
+
+.imageGrid a:hover {
+	color: #fcb712;
+}
+
+.pagination {
+	color: #fcb712;
+	float: right;
+	text-decoration: none;
+}

@@ -6,4 +6,10 @@ $(document).ready(function() {
 		  var thumbnail= $(this).attr('src');
 		  document.getElementById("bigImage").src = thumbnail;
 	});
+
+	$('.share').click(function(){
+		$('.social').toggle(function(){
+			$('.social').show();
+		})
+	});
 });
