@@ -16,7 +16,7 @@ PLATFORMS
 
 DEPENDENCIES
   sinatra
-  will_paginate
+  will_paginate (~> 3.1)
 
 BUNDLED WITH
    1.11.2

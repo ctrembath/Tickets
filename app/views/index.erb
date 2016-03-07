@@ -10,20 +10,20 @@
 
 	<article id="selectedImage">
 		<div class="maroonStip"></div>
-			<img id="bigImage" src="" width="1000" height="480">>
+			<img id="bigImage" src="" width="1000" height="480">
 		<p class="imageTitle"></p>
 	</article>
 
 <div class="imageGrid">
 	<ul>
 		<% if @photos %>
-			<% @photos.each do |p| %>
-			   <li> <img class="flickImg" src=<%= p.image_url %>> </li>
-			<% end %>
+				<% @photos.each do |p| %>
+				   <li> <img class="flickImg" src=<%= p.image_url %>> </li>
+				<% end %>
 		<% end %>
 	</ul>
-
 </div>
+<%= will_paginate @photos, previous_label: "<", next_label: ">" %>
 
 <footer>
 

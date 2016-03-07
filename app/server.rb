@@ -1,7 +1,11 @@
 require 'sinatra'
 require 'flickr_fu'
+require 'will_paginate'
+require 'will_paginate/array'
+
 
 set :public_dir, Proc.new { File.join(root, "..", "public") }
+
 
 get '/' do
 	connect_to_flickr
@@ -20,5 +24,5 @@ def connect_to_flickr
 end
 
 def search_flickr(search_term)
-	@photos = @flickr.photos.search(:tags => search_term).take(12)
+	@photos = @flickr.photos.search(:tags => search_term).paginate(:page  => params[:page], :per_page => 12)
 end
